@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Target Co (hypothetical) deal dashboard</title>
+<style>
+:root{--bg:#fff;--fg:#1d1d1f;--muted:#6e6e73;--card:#f5f5f7;--grid:#d9d9de;--accent:#0b3d91;--pos:#1a7f37;--neg:#c62828}
+@media (prefers-color-scheme: dark){:root{--bg:#111;--fg:#f2f2f2;--muted:#9a9aa0;--card:#1c1c1e;--grid:#333;--accent:#7fb2ff;--pos:#4cc76b;--neg:#ff7b7b}}
+body{font:15px/1.55 system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--fg);margin:0;padding:32px}
+main{max-width:1080px;margin:0 auto}
+h1{font-size:28px;margin:0 0 4px}h2{font-size:18px;margin:26px 0 10px;color:var(--accent)}
+.sub{color:var(--muted);margin-bottom:18px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:14px 0}
+.kpi,.card{background:var(--card);border-radius:12px;padding:16px 18px}
+.kpi .v{font-size:24px;font-weight:600}.kpi .l{color:var(--muted);font-size:13px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media (max-width:820px){.grid2{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:right;padding:7px 9px;border-bottom:1px solid var(--grid)}
+th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-weight:500}
+.note{color:var(--muted);font-size:13px;margin-top:8px}
+.chart{width:100%;height:auto}.axis{fill:var(--muted);font-size:12px}.lbl{fill:var(--fg);font-size:13px}
+.grid{stroke:var(--grid)}.bar{fill:var(--accent);opacity:.85}.bar.neg{fill:var(--neg)}.bar.pos{fill:var(--pos)}
+.tabs{display:flex;gap:8px;margin:6px 0 18px}
+.tabs button{font:inherit;padding:8px 16px;border-radius:999px;border:1px solid var(--grid);background:var(--card);color:var(--fg);cursor:pointer}
+.tabs button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.view{display:none}.view.on{display:block}
+.takeaways li{margin-bottom:8px}
+.disclaimer{color:var(--muted);font-size:12px;margin-top:28px;border-top:1px solid var(--grid);padding-top:12px}
+</style></head><body><main>
+<h1>Target Co (hypothetical): deal dashboard</h1>
+<div class="sub">Illustrative analysis on hypothetical inputs · prepared by Shubham</div>
+<nav class="tabs"><button class="on" data-v="client">Client view</button><button data-v="banker">Banker view</button></nav>
+<section class="view on" id="client">
+<div class="kpis">
+  <div class="kpi"><div class="v">16.3%</div><div class="l">Sponsor IRR</div></div>
+  <div class="kpi"><div class="v">2.13x</div><div class="l">Money multiple (MOIC)</div></div>
+  <div class="kpi"><div class="v">3.4%</div><div class="l">EPS accretion / (dilution)</div></div>
+  <div class="kpi"><div class="v">$1,000.0m</div><div class="l">Purchase enterprise value</div></div>
+</div>
+<h2>Key takeaways</h2>
+<div class="card"><ul class="takeaways"><li>At a 10.0x entry and 10.0x exit, the sponsor's projected return is <b>16.3% IRR</b> and <b>2.13x money multiple</b> over 5 years.</li><li>The deal is funded with <b>$500.0m of debt</b> and <b>$520.0m of equity</b>.</li><li>The merger is <b>accretive by 3.4%</b> to EPS, including $15.0m of pre-tax synergies per year.</li><li>Break-even synergies are about <b>$2.6m pre-tax</b> per year.</li><li>Precedent transactions imply an enterprise value between roughly <b>$885.0m and $1,105.0m</b>.</li></ul></div>
+<h2>Where value comes from</h2>
+<div class="card"><svg viewBox="0 0 880 174" class="chart" xmlns="http://www.w3.org/2000/svg">
+<line x1="250.0" x2="250.0" y1="14" y2="140" class="grid"/>
+<text x="250.0" y="152" class="axis" text-anchor="middle">$702m</text>
+<line x1="401.5" x2="401.5" y1="14" y2="140" class="grid"/>
+<text x="401.5" y="152" class="axis" text-anchor="middle">$855m</text>
+<line x1="553.0" x2="553.0" y1="14" y2="140" class="grid"/>
+<text x="553.0" y="152" class="axis" text-anchor="middle">$1,008m</text>
+<line x1="704.5" x2="704.5" y1="14" y2="140" class="grid"/>
+<text x="704.5" y="152" class="axis" text-anchor="middle">$1,161m</text>
+<line x1="856.0" x2="856.0" y1="14" y2="140" class="grid"/>
+<text x="856.0" y="152" class="axis" text-anchor="middle">$1,314m</text>
+<text x="240" y="43.0" class="lbl" text-anchor="end">Precedent range (low–high)</text>
+<rect x="327.2" y="24" width="455.2" height="30" rx="4" class="bar"/>
+<text x="321.2" y="43.0" class="axis" text-anchor="end">$780m</text>
+<text x="788.4" y="43.0" class="axis">$1,240m</text>
+<text x="240" y="93.0" class="lbl" text-anchor="end">Interquartile (25th–75th)</text>
+<rect x="431.1" y="74" width="217.7" height="30" rx="4" class="bar"/>
+<text x="425.1" y="93.0" class="axis" text-anchor="end">$885m</text>
+<text x="654.8" y="93.0" class="axis">$1,105m</text>
+<text x="440" y="170" class="axis" text-anchor="middle">Enterprise value at 9.9x median EBITDA</text>
+</svg>
+<div class="note">Enterprise value ranges from precedent transaction multiples applied to Target Co (hypothetical)'s LTM EBITDA.</div></div>
+</section>
+<section class="view" id="banker">
+<h2>Projections and debt paydown</h2><div class="card"><table><tr><th>$m</th><th>Y1</th><th>Y2</th><th>Y3</th><th>Y4</th><th>Y5</th></tr><tr><td>Revenue</td><td>540.0</td><td>583.2</td><td>624.0</td><td>661.5</td><td>694.5</td></tr><tr><td>EBITDA</td><td>108.0</td><td>116.6</td><td>124.8</td><td>132.3</td><td>138.9</td></tr><tr><td>Interest</td><td>40.0</td><td>37.6</td><td>34.8</td><td>31.3</td><td>27.3</td></tr><tr><td>Net income</td><td>38.8</td><td>46.1</td><td>53.5</td><td>60.9</td><td>68.1</td></tr><tr><td>Free cash flow</td><td>29.4</td><td>36.0</td><td>43.2</td><td>50.5</td><td>57.8</td></tr><tr><td>Debt (closing)</td><td>470.6</td><td>434.6</td><td>391.4</td><td>340.9</td><td>283.1</td></tr><tr><td>Net debt</td><td>470.6</td><td>434.6</td><td>391.4</td><td>340.9</td><td>283.1</td></tr><tr><td>Net debt / EBITDA</td><td>4.4x</td><td>3.7x</td><td>3.1x</td><td>2.6x</td><td>2.0x</td></tr></table></div>
+<div class="grid2">
+  <div class="card"><h2 style="margin-top:0">Sources &amp; uses and exit</h2><table><tr><th>Sources &amp; uses</th><th>$m</th></tr><tr><td>Purchase enterprise value</td><td>1,000.0</td></tr><tr><td>Fees</td><td>20.0</td></tr><tr><td><b>Total uses</b></td><td><b>1,020.0</b></td></tr><tr><td>New debt</td><td>500.0</td></tr><tr><td>Sponsor equity</td><td>520.0 (51%)</td></tr><tr><td><b>Exit equity value</b></td><td><b>1,106.0</b></td></tr></table></div>
+  <div class="card"><h2 style="margin-top:0">Merger</h2><table><tr><th>Merger</th><th>Value</th></tr><tr><td>Standalone EPS</td><td>2.17</td></tr><tr><td>Pro forma EPS</td><td>2.24</td></tr><tr><td>New shares issued (m)</td><td>7.20</td></tr><tr><td>New debt for cash consideration ($m)</td><td>540.0</td></tr><tr><td>Break-even synergies, pre-tax ($m)</td><td>2.6</td></tr></table></div>
+</div>
+<h2>Sponsor IRR sensitivity</h2>
+<div class="card"><table><tr><th></th><th>8.0x exit</th><th>9.0x exit</th><th>10.0x exit</th><th>11.0x exit</th><th>12.0x exit</th></tr><tr><td>9.0x entry</td><td style="background:color-mix(in srgb, #0b3d91 36%, var(--card))">14.7%</td><td style="background:color-mix(in srgb, #0b3d91 47%, var(--card))">18.3%</td><td style="background:color-mix(in srgb, #0b3d91 56%, var(--card))">21.5%</td><td style="background:color-mix(in srgb, #0b3d91 64%, var(--card))">24.4%</td><td style="background:color-mix(in srgb, #0b3d91 72%, var(--card))">27.1%</td></tr><tr><td>10.0x entry</td><td style="background:color-mix(in srgb, #0b3d91 22%, var(--card))">9.8%</td><td style="background:color-mix(in srgb, #0b3d91 32%, var(--card))">13.2%</td><td style="background:color-mix(in srgb, #0b3d91 41%, var(--card))">16.3%</td><td style="background:color-mix(in srgb, #0b3d91 49%, var(--card))">19.1%</td><td style="background:color-mix(in srgb, #0b3d91 56%, var(--card))">21.6%</td></tr><tr><td>11.0x entry</td><td style="background:color-mix(in srgb, #0b3d91 12%, var(--card))">5.9%</td><td style="background:color-mix(in srgb, #0b3d91 21%, var(--card))">9.2%</td><td style="background:color-mix(in srgb, #0b3d91 29%, var(--card))">12.2%</td><td style="background:color-mix(in srgb, #0b3d91 37%, var(--card))">14.9%</td><td style="background:color-mix(in srgb, #0b3d91 44%, var(--card))">17.3%</td></tr></table><div class="note">Rows: entry multiple. Columns: exit multiple. Darker is higher IRR.</div></div>
+<h2>EPS accretion / (dilution) by synergy level</h2>
+<div class="card"><svg viewBox="0 0 880 280" class="chart" xmlns="http://www.w3.org/2000/svg">
+<line x1="52" x2="864" y1="236.0" y2="236.0" class="grid"/>
+<text x="46" y="240.0" class="axis" text-anchor="end">-1.2%</text>
+<line x1="52" x2="864" y1="181.0" y2="181.0" class="grid"/>
+<text x="46" y="185.0" class="axis" text-anchor="end">0.8%</text>
+<line x1="52" x2="864" y1="126.0" y2="126.0" class="grid"/>
+<text x="46" y="130.0" class="axis" text-anchor="end">2.8%</text>
+<line x1="52" x2="864" y1="71.0" y2="71.0" class="grid"/>
+<text x="46" y="75.0" class="axis" text-anchor="end">4.9%</text>
+<line x1="52" x2="864" y1="16.0" y2="16.0" class="grid"/>
+<text x="46" y="20.0" class="axis" text-anchor="end">6.9%</text>
+<line x1="52" x2="864" y1="202.5" y2="202.5" stroke="var(--muted)"/>
+<rect x="79.1" y="202.5" width="81.2" height="18.8" rx="3" class="bar neg"/>
+<text x="119.7" y="252" class="axis" text-anchor="middle">$0m</text>
+<text x="119.7" y="233.3" class="lbl" text-anchor="middle">-0.7%</text>
+<rect x="214.4" y="184.7" width="81.2" height="17.8" rx="3" class="bar pos"/>
+<text x="255.0" y="252" class="axis" text-anchor="middle">$5m</text>
+<text x="255.0" y="179.7" class="lbl" text-anchor="middle">0.7%</text>
+<rect x="349.7" y="148.0" width="81.2" height="54.5" rx="3" class="bar pos"/>
+<text x="390.3" y="252" class="axis" text-anchor="middle">$10m</text>
+<text x="390.3" y="143.0" class="lbl" text-anchor="middle">2.0%</text>
+<rect x="485.1" y="111.3" width="81.2" height="91.2" rx="3" class="bar pos"/>
+<text x="525.7" y="252" class="axis" text-anchor="middle">$15m</text>
+<text x="525.7" y="106.3" class="lbl" text-anchor="middle">3.4%</text>
+<rect x="620.4" y="74.7" width="81.2" height="127.8" rx="3" class="bar pos"/>
+<text x="661.0" y="252" class="axis" text-anchor="middle">$20m</text>
+<text x="661.0" y="69.7" class="lbl" text-anchor="middle">4.7%</text>
+<rect x="755.7" y="38.0" width="81.2" height="164.5" rx="3" class="bar pos"/>
+<text x="796.3" y="252" class="axis" text-anchor="middle">$25m</text>
+<text x="796.3" y="33.0" class="lbl" text-anchor="middle">6.1%</text>
+</svg>
+<div class="note">Pre-tax synergies, $m. Bars below zero are dilutive.</div></div>
+</section>
+<div class="disclaimer">Illustrative analysis on hypothetical inputs. Not investment advice, a fairness opinion, or a recommendation to buy or sell any security. Verify every input before use.</div>
+</main><script>
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===b.dataset.v));
+});
+</script></body></html>
